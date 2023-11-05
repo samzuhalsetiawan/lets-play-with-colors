@@ -1,0 +1,17 @@
+.sidenav {
+    @apply font-sans;
+    color: var(--main-white);
+    padding: 3rem 4rem;
+}
+
+.sidenav li:hover {
+    color: var(--on-main-white);
+}
+
+.sidenav ul li {
+    margin: 1.2rem 0;
+}
+
+.active {
+    color: var(--on-main-white);
+}

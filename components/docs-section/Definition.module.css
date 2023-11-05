@@ -1,0 +1,15 @@
+.container p {
+    @apply text-justify font-sans text-[var(--main-white)] indent-8 mb-3;
+}
+
+.container ol {
+    @apply font-sans;
+    list-style: decimal outside;
+    margin-left: 4rem;
+    color: var(--main-white);
+    text-align: justify;
+}
+
+.container ol li {
+    @apply mb-3;
+}
