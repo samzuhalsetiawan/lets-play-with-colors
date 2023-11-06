@@ -9,26 +9,28 @@ interface AboutProps {
 export default function About({ className = "" }: AboutProps) {
     return (
         <div className={cn("flex justify-center items-center", className)}>
-            <div className={cn(styles.profile, "gap-10")}>
-                <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
-                    <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
-                    <p>Sam Zuhal Seiawan</p>
-                    <p>2005176043</p>
-                </div>
-                <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
-                    <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
-                    <p>Qalbi</p>
-                    <p>2005176xxx</p>
-                </div>
-                <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
-                    <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
-                    <p>Yoland</p>
-                    <p>2005176xxx</p>
-                </div>
-                <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
-                    <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
-                    <p>Isna</p>
-                    <p>2005176xxx</p>
+            <div className={styles.profileContainer}>
+                <div className={cn(styles.profile)}>
+                    <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
+                        <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
+                        <p>Sam Zuhal Seiawan</p>
+                        <p>2005176043</p>
+                    </div>
+                    <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
+                        <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
+                        <p>Qalbi</p>
+                        <p>2005176xxx</p>
+                    </div>
+                    <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
+                        <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
+                        <p>Yoland</p>
+                        <p>2005176xxx</p>
+                    </div>
+                    <div className='flex flex-col justify-center items-center text-[var(--main-white)]'>
+                        <Picture className='mb-3' photoPad='border-b-[20px]' aspectRasio='aspect-[2/3]' src='/sam_crop.jpeg' />
+                        <p>Isna</p>
+                        <p>2005176xxx</p>
+                    </div>
                 </div>
             </div>
             <div className={cn(styles.bottom)}>

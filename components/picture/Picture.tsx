@@ -15,7 +15,7 @@ interface PictureProps {
 export default function Picture({ photoPad = "border-r-[25px]", src, useBorder = true, height = "h-40", aspectRasio = "aspect-video", className = "" }: PictureProps) {
     return (
         <div className={cn(className)}>
-            <div className={cn("relative m-auto", height, aspectRasio, useBorder ? `shadow-lg border-8 border-[var(--main-white)]` : "", photoPad)}>
+            <div className={cn("relative m-auto", height, aspectRasio, useBorder ? `shadow-lg border-8 border-[var(--main-white)]` : "", useBorder ? photoPad : "")}>
                 <Image src={src} alt="pensil warna" fill style={{ "objectFit": "cover" }} />
             </div>
         </div>

@@ -7,8 +7,8 @@
 .slider {
     appearance: none;
     outline: none;
+    @apply w-[25vh] lg:w-[330px];
     height: 10px;
-    width: 330px;
     background: transparent;
     overflow: hidden;
     border: 1px solid var(--color);

@@ -1,5 +1,6 @@
 import Definition from "@/components/docs-section/Definition";
-import SideNav from "@/components/sidenav/SideNav";
+import NavigationProvider from "@/components/navigation/NavigationProvider";
+import SideNav from "@/components/navigation/sidenav/SideNav";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,9 +12,9 @@ interface DocsPageProps {
 
 export default function DocsPage({ children }: DocsPageProps) {
     return (
-        <div className="min-w-screen min-h-screen flex">
-            <SideNav className="flex-1"/>
-            <div className="w-[1px] h-screen bg-gradient-to-b from-transparent via-[var(--main-white)]" />
+        <div className="min-w-screen min-h-screen flex flex-col lg:flex-row">
+            <NavigationProvider className="flex-1" />
+            <div className="hidden lg:block w-[1px] h-screen bg-gradient-to-b from-transparent via-[var(--main-white)]" />
             <section className="flex-[6]">
                 { children || <Definition /> }
             </section>

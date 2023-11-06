@@ -26,10 +26,10 @@ export default function SideNav({ className = "" }: SideNavProps) {
                         <Link href={'/docs/wheel'}>Roda Warna</Link>
                     </li>
                     <li className={pathName == "/any" ? styles.active : ""}>
-                        <Link href={''}>Comming Soon</Link>
+                        <Link href={'#'}>Comming Soon</Link>
                     </li>
                     <li className={pathName == "/any" ? styles.active : ""}>
-                        <Link href={''}>Comming Soon</Link>
+                        <Link href={'#'}>Comming Soon</Link>
                     </li>
                 </ul>
             </nav>

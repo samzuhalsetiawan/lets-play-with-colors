@@ -37,14 +37,14 @@ export default function Converter() {
 
     return (
         <section className="relative min-h-screen w-screen">
-            <div className="h-screen w-screen flex justify-center items-center fixed top-0 left-0">
+            <div className="h-screen w-screen flex flex-col lg:flex-row justify-center items-center fixed top-0 left-0">
                 <div className='flex flex-[1.3] justify-center items-center'>
                     <BottleGlass liquidPercentage={1} color={hexToString(campurWarna(color1, color2, colorSlider1Value))} />
                 </div>
-                <div className='flex flex-[2] justify-center items-center gap-28'>
-                    <div className="flex items-end gap-5 relative">
+                <div className='flex flex-[2] justify-center items-center gap-16 lg:gap-28'>
+                    <div className="flex items-end relative">
                         <BottleGlass onClick={showColorPickerFor(setColor1)} liquidPercentage={colorSlider1Value} color={color1} />
-                        <VerticalSlider className="absolute bottom-0 left-[calc(100%+25px)]" value={colorSlider1Value} color={color1} onValueChange={onSliderValueChange(setColorSlider1Value, setColorSlider2Value)}/>
+                        <VerticalSlider className="absolute bottom-0 left-[calc(100%+15px)] lg:left-[calc(100%+25px)]" value={colorSlider1Value} color={color1} onValueChange={onSliderValueChange(setColorSlider1Value, setColorSlider2Value)}/>
                     </div>
                     <div className="flex items-end gap-5 relative">
                         <BottleGlass onClick={showColorPickerFor(setColor2)} liquidPercentage={colorSlider2Value} color={color2} />
@@ -53,7 +53,7 @@ export default function Converter() {
                 </div>
             </div>
             <div
-                className={cn("px-24 py-12 min-h-screen w-screen flex-col justify-center backdrop-blur-md", showColorPicker ? "flex" : "hidden")}
+                className={cn("lg:px-24 lg:py-12 min-h-screen w-screen flex-col justify-center backdrop-blur-md", showColorPicker ? "flex" : "hidden")}
                 onClick={() => setShowColorPicker(false)}>
                 <ColorListContainer title="Warna Primer">
                     <SmallBottleGlass onClick={onColorPickerSelected} color="#0086de" />

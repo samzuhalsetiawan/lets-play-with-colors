@@ -1,0 +1,84 @@
+.sidenav {
+    @apply font-sans;
+    color: var(--main-white);
+    padding: 3rem 4rem;
+}
+
+.sidenav li:hover {
+    color: var(--on-main-white);
+}
+
+.sidenav ul li {
+    margin: 1.2rem 0;
+}
+
+.active {
+    color: var(--on-main-white);
+}
+
+.menu {
+    height: 3rem;
+    @apply transition-[height];
+    transition-duration: 300ms;
+}
+
+.openMenu {
+    height: 30vh;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+    width: calc(1.3rem + 10px);
+    height: 1.3rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .bar {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--main-white);
+    transition: all .3s;
+  }
+  
+  .bar.middle {
+    top: 50%;
+    /* margin-top: -2px; */
+    transform: translateY(-50%);
+  }
+  
+  .bar.bottom {
+    bottom: 0;
+  }
+  
+  .hamburger.active {
+    z-index: 2;
+    height: calc(1.3rem + 3px);
+    animation: rotateHamburger .5s linear 0s forwards;
+  }
+  
+  .hamburger.active .bar {
+    background: var(--main-white);
+  }
+  
+  .hamburger.active .bar.top {
+    transform: translateY(calc(1.3rem / 2)) rotate(45deg);
+  }
+  
+  .hamburger.active .bar.middle {
+    width: 0;
+  }
+  
+  .hamburger.active .bar.bottom {
+    transform: translateY(calc(-1 * 1.3rem / 2)) rotate(-45deg);
+  }
+
+  @keyframes rotateHamburger {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }

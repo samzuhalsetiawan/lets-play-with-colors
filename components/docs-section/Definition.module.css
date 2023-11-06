@@ -1,11 +1,10 @@
 .container p {
-    @apply text-justify font-sans text-[var(--main-white)] indent-8 mb-3;
+    @apply text-justify font-sans text-[var(--main-white)] indent-3 lg:indent-8 mb-3;
 }
 
 .container ol {
-    @apply font-sans;
+    @apply font-sans ml-6 lg:ml-16;
     list-style: decimal outside;
-    margin-left: 4rem;
     color: var(--main-white);
     text-align: justify;
 }

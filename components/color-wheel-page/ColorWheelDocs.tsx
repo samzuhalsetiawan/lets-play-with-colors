@@ -9,7 +9,7 @@ interface ColorWheelDocsProps {
 export default function ColorWheelDocs({ className }: ColorWheelDocsProps) {
     return (
         <div className={cn("min-h-screen w-full p-[4rem] group", styles.container ,className)}>
-            <Picture src={'/roda_warna.jpg'} height="h-[15rem]" aspectRasio="aspect-[3.5/3]" className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+            <Picture src={'/roda_warna.jpg'} height="h-[15rem]" aspectRasio="aspect-[3.5/3]" className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 transition")} />
             <p>
                 Lingkaran berwarna adalah representasi grafis yang mencoba mengatur warna sesuai dengan nada suara masing-masing.
 
@@ -32,28 +32,28 @@ export default function ColorWheelDocs({ className }: ColorWheelDocsProps) {
             </p>
             <ol>
                 <li>Harmoni monokrom</li>
-                <Picture src={'/twitter.png'} useBorder={false} aspectRasio="aspect-square" className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+                <Picture height="h-24 lg:h-40" src={'/twitter.png'} useBorder={false} aspectRasio="aspect-square" className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 transition")} />
                 <p>
                     Dalam jenis harmoni ini, warna dipilih dan skema dibuat dari rona, nada, dan coraknya.
 
                     Contoh yang baik untuk menggunakan harmoni kromatik adalah perusahaan Internet Twitter.
                 </p>
                 <li>Harmoni dengan warna analog</li>
-                <Picture src={'/bp.png'} aspectRasio="aspect-video" className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+                <Picture height="h-24 lg:h-40" src={'/bp.png'} aspectRasio="aspect-video" className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 transition")} />
                 <p>
                     Memilih nuansa berbeda yang berdekatan juga merupakan strategi yang selalu berhasil dalam desain.
 
                     Coca Cola dan British Petrolium (BP) adalah dua merek yang menjadi contoh strategi ini.
                 </p>
                 <li>Harmoni dengan warna komplementer (atau sesuai kontras)</li>
-                <Picture src={'/komplementer.jpeg'} height="h-[14rem]" aspectRasio="aspect-video" className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+                <Picture height="h-32 lg:h-[14rem]" src={'/komplementer.jpeg'} aspectRasio="aspect-video" className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 transition")} />
                 <p>
                     Ini adalah harmoni antara warna yang berada dalam posisi berlawanan pada roda warna.
 
                     Perpaduan warna-warna tersebut terutama ditunjukkan ketika Anda ingin menarik perhatian dan memberikan dampak langsung dan kuat karena warna-warna tersebut saling menguatkan.
                 </p>
                 <li>Harmoni dengan empat warna</li>
-                <Picture src={'/harmoni4warna.jpeg'} height="h-[14rem]" aspectRasio="aspect-video" className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+                <Picture height="h-32 lg:h-[14rem]" src={'/harmoni4warna.jpeg'} aspectRasio="aspect-video" className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 transition")} />
                 <p>
                     Jenis harmoni ini sulit dicapai, karena digunakan dua pasangan yang saling melengkapi.
 

@@ -6,9 +6,8 @@
 }
 
 .glass > div {
+    @apply h-[30vh] w-[30vw] lg:h-[400px] lg:w-[200px];
     position: relative;
-    width: 200px;
-    height: 400px;
     background: rgba(153, 52, 52, 0.1);
     border-radius: 40px;
     border: 8px solid transparent;
@@ -29,17 +28,13 @@
 
 .glass > div::after {
     content: "";
-    position: absolute;
-    top: 70px;
-    left: 30px;
-    width: 50px;
-    height: 250px;
+    @apply absolute w-[2rem] lg:w-[50px] h-[7rem] lg:h-[250px] top-[3rem] lg:top-[70px] left-[1rem] lg:left-[30px];
     background: rgba(255, 255, 255, 0.1);
 }
 
 .liquid {
-    position: absolute;
-    top: 50px;
+    @apply absolute top-12;
+    /* top: 50px; */
     left: 5px;
     right: 5px;
     bottom: 5px;

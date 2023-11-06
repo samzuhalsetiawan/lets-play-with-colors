@@ -37,20 +37,20 @@ export default function Hero({ className = "" }: HeroProps) {
 
 
     return (
-        <div className={cn("relative h-[70vh] aspect-[3/2]", className)}>
-            <div className={cn("relative h-[70vh] aspect-[3/2]")}>
+        <div className={cn("relative p-8 lg:p-0 lg:h-[70vh] w-screen lg:w-auto lg:aspect-[3/2]", className)}>
+            <div className={cn("relative h-[30vh] lg:h-[70vh] w-[80vw] lg:w-auto lg:aspect-[3/2]")}>
                 <Image src={'/colors.png'} alt="colors" fill />
             </div>
-            <div className={cn("absolute w-[80%] top-[50%] left-[30%] translate-y-[-50%]")}>
-                <h1 className={cn("font-sans text-5xl")}>
+            <div className={cn("absolute lg:w-[80%] top-[50%] left-[20%] pr-8 lg:pr-0 lg:left-[30%] translate-y-[-50%]")}>
+                <h1 className={cn("font-sans text-3xl lg:text-5xl")}>
                     <span>Life is </span>
                     <span ref={el}></span>
                 </h1>
                 <blockquote className={cn("mt-5 space-y-2")}>
-                    <p className="text-lg">
+                    <p className="text-base lg:text-lg">
                         &ldquo;Life is a painting, and you are the artist. You have on your palette all the colors in the spectrum - the same ones available to Michaelangelo and DaVinci.&rdquo;
                     </p>
-                    <footer className="text-sm">Paul J. Meyer</footer>
+                    <footer className="text-xs lg:text-sm">Paul J. Meyer</footer>
                 </blockquote>
             </div>
         </div>

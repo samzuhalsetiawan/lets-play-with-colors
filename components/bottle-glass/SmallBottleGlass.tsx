@@ -28,7 +28,7 @@ export default function SmallBottleGlass({ className = "", onClick, color }: Sma
                 <div className={styles.liquid}></div>
             </div>
             <div>
-                <p className={cn("font-sans text-lg text-center text-[#ffe6eb]")}>Blue</p>
+                <p className={cn("font-sans text-base lg:text-lg text-center text-[var(--main-white)]")}>Blue</p>
             </div>
         </div>
     )

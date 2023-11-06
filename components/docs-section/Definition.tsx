@@ -10,7 +10,7 @@ interface DefinitionProps {
 export default function Definition({ className = "" }: DefinitionProps) {
     return (
         <div className={cn("min-h-screen w-full p-[4rem] group", styles.container ,className)}>
-            <Picture src={'/pencil_color.jpg'} className={cn("w-full mb-3 rotate-12 group-hover:rotate-0 transition")} />
+            <Picture src={'/pencil_color.jpg'} className={cn("w-full mb-3 lg:rotate-12 group-hover:rotate-0 lg:transition")} />
             <p>
                 Warna adalah spektrum tertentu yang terdapat di dalam suatu cahaya sempurna (berwarna putih). Identitas suatu warna ditentukan panjang gelombang cahaya tersebut. Sebagai contoh warna biru memiliki panjang gelombang 460 nanometer.
             </p>

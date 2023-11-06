@@ -1,23 +1,18 @@
 .bowl {
     --color: #41c1fb;
     --color-darker: #1fa4e0;
-    position: relative;
-    width: 150px;
-    height: 150px;
+    @apply relative w-[5rem] lg:w-[150px] h-[5rem] lg:h-[150px] border-[5px] lg:border-[8px] border-transparent;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border: 8px solid transparent;
 }
 
 .bowl::before {
     content: "";
-    position: absolute;
+    @apply absolute h-[20px] lg:h-[30px] border-[5px] lg:border-[8px] border-[#44444491];
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
-    height: 30px;
-    border: 8px solid #44444491;
     border-radius: 50%;
     box-shadow: 0 6px #22222242;
 }
@@ -57,12 +52,10 @@
 }
 
 .shadow {
+    @apply w-[4rem] lg:w-[120px] h-[12px] lg:h-[18px] top-[calc(50%+40px)] lg:top-[calc(50%+75px)];
     position: absolute;
-    top: calc(50% + 75px);
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 18px;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     z-index: -99;

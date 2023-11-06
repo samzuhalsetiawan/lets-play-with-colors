@@ -2,7 +2,7 @@
 
 import { cn, hexToRgb, rgbToHsl } from '@/lib/utils'
 import styles from './BottleGlass.module.css'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface BottleGlassProps {
     className?: string,
@@ -13,13 +13,29 @@ interface BottleGlassProps {
 
 export default function BottleGlass({onClick, color, className = "", liquidPercentage }: BottleGlassProps) {
     
-    const liquidMaxCapacity = 350
+    const [liquidMaxCapacity, setLiquidMaxCapacity] = useState<number | null>(null)
+    const [liquidTopOffset, setLiquidTopOffset] = useState(48)
     const liquidRef = useRef<HTMLDivElement | null>(null)
+    const liquidContainerRef = useRef<HTMLDivElement | null>(null)
     
+    useEffect(() => {
+        const containerHeight = liquidContainerRef.current!.clientHeight
+        const offset = 2 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+        setLiquidMaxCapacity(containerHeight - offset)
+        setLiquidTopOffset(offset)
+    }, [])
+
     useEffect(() => {
         if (liquidPercentage < 0.1) return
         const invertedValue = liquidPercentage * -1 + 1
-        liquidRef.current!.style.top = `${50 + invertedValue * liquidMaxCapacity}px`
+        // liquidRef.current!.style.top = `${50 + invertedValue * liquidMaxCapacity}px`
+        if (!liquidMaxCapacity && onClick) {
+            liquidRef.current!.style.top = "calc(50% + 1rem)"
+            return
+        }
+        if (liquidMaxCapacity) {
+            liquidRef.current!.style.top = `${liquidTopOffset + invertedValue * liquidMaxCapacity}px`
+        }
     }, [liquidPercentage])
 
     useEffect(() => {
@@ -31,7 +47,7 @@ export default function BottleGlass({onClick, color, className = "", liquidPerce
 
     return (
         <div onClick={() => onClick && onClick()} className={cn(styles.glass, className)}>
-            <div>
+            <div ref={liquidContainerRef}>
                 <div ref={liquidRef} className={styles.liquid}></div>
             </div>
         </div>
