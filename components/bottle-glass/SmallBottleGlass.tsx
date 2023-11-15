@@ -13,12 +13,19 @@ interface SmallBottleGlassProps {
 export default function SmallBottleGlass({ className = "", onClick, color }: SmallBottleGlassProps) {
     
     const bowlRef = useRef<HTMLDivElement | null>(null)
+    const nameRef = useRef<HTMLParagraphElement | null>(null)
     
     useEffect(() => {
         bowlRef.current!.style.setProperty("--color", color)
         const rgb = hexToRgb(color)
         const hsl = rgbToHsl(rgb)
         bowlRef.current!.style.setProperty("--color-darker", `hsl(${hsl.hue}, ${hsl.saturation}%, ${hsl.lightness - 12}%)`)
+
+        fetch(`https://api.color.pizza/v1/?values=${color.substring(1)}`).then(response => {
+            response.json().then(data => {
+                nameRef.current!.innerText = data.paletteTitle
+            })
+        })
     }, [color])
 
     return (
@@ -28,7 +35,7 @@ export default function SmallBottleGlass({ className = "", onClick, color }: Sma
                 <div className={styles.liquid}></div>
             </div>
             <div>
-                <p className={cn("font-sans text-base lg:text-lg text-center text-[var(--main-white)]")}>Blue</p>
+                <p ref={nameRef} className={cn("font-sans text-base lg:text-lg text-center text-[var(--main-white)]")}></p>
             </div>
         </div>
     )

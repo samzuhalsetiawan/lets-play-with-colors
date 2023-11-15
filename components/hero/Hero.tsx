@@ -17,11 +17,11 @@ export default function Hero({ className = "" }: HeroProps) {
     React.useEffect(() => {
         const typed = new Typed(el.current, {
             strings: [
-                '<span style="color: blue;">Blue</span>',
-                '<span style="color: red;">Red</span>',
-                '<span style="color: orange;">Orange</span>',
-                '<span style="color: green;">Green</span>',
-                '<span style="color: yellow;">Yellow</span>',
+                '<span style="color: #0086de;">Blue</span>',
+                '<span style="color: #ff256b;">Red</span>',
+                '<span style="color: #ff9236;">Orange</span>',
+                '<span style="color: #80c36f;">Green</span>',
+                '<span style="color: #ffff00;">Yellow</span>',
             ],
             typeSpeed: 80,
             backSpeed: 50,

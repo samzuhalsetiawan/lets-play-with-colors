@@ -65,9 +65,25 @@ export default function Converter() {
                     <SmallBottleGlass onClick={onColorPickerSelected} color="#80c36f" />
                     <SmallBottleGlass onClick={onColorPickerSelected} color="#ff9236" />
                 </ColorListContainer>
-                <ColorListContainer title="Warna Tersier">
+                <ColorListContainer title="Warna Lainnya">
                     <SmallBottleGlass onClick={onColorPickerSelected} color="#000000" />
                     <SmallBottleGlass onClick={onColorPickerSelected} color="#ffffff" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#B6FFFA" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#F94C10" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FFA1F5" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FEFFAC" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#6528F7" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#F6FA70" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FF55BB" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#16FF00" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#B3FFAE" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#3F0071" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FB2576" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#F8F988" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FFCAC8" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#FF9E9E" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#C0EEE4" />
+                    <SmallBottleGlass onClick={onColorPickerSelected} color="#3EC70B" />
                 </ColorListContainer>
             </div>
         </section>
