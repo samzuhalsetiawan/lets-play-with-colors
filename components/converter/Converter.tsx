@@ -44,11 +44,11 @@ export default function Converter() {
                 <div className='flex flex-[2] justify-center items-center gap-16 lg:gap-28'>
                     <div className="flex items-end relative">
                         <BottleGlass onClick={showColorPickerFor(setColor1)} liquidPercentage={colorSlider1Value} color={color1} />
-                        <VerticalSlider className="absolute bottom-0 left-[calc(100%+15px)] lg:left-[calc(100%+25px)]" value={colorSlider1Value} color={color1} onValueChange={onSliderValueChange(setColorSlider1Value, setColorSlider2Value)}/>
+                        <VerticalSlider className="absolute bottom-[2.5rem] left-[calc(100%+15px)] lg:left-[calc(100%+25px)]" value={colorSlider1Value} color={color1} onValueChange={onSliderValueChange(setColorSlider1Value, setColorSlider2Value)}/>
                     </div>
                     <div className="flex items-end gap-5 relative">
                         <BottleGlass onClick={showColorPickerFor(setColor2)} liquidPercentage={colorSlider2Value} color={color2} />
-                        <VerticalSlider className="absolute bottom-0 left-[calc(100%+25px)]" value={colorSlider2Value} color={color2} onValueChange={onSliderValueChange(setColorSlider2Value, setColorSlider1Value)}/>
+                        <VerticalSlider className="absolute bottom-[2.5rem] left-[calc(100%+25px)]" value={colorSlider2Value} color={color2} onValueChange={onSliderValueChange(setColorSlider2Value, setColorSlider1Value)}/>
                     </div>
                 </div>
             </div>

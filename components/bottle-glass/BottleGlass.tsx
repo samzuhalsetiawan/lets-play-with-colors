@@ -17,6 +17,7 @@ export default function BottleGlass({onClick, color, className = "", liquidPerce
     const [liquidTopOffset, setLiquidTopOffset] = useState(48)
     const liquidRef = useRef<HTMLDivElement | null>(null)
     const liquidContainerRef = useRef<HTMLDivElement | null>(null)
+    const nameRef = useRef<HTMLParagraphElement | null>(null)
     
     useEffect(() => {
         const containerHeight = liquidContainerRef.current!.clientHeight
@@ -43,6 +44,12 @@ export default function BottleGlass({onClick, color, className = "", liquidPerce
         const rgb = hexToRgb(color)
         const hsl = rgbToHsl(rgb)
         liquidRef.current!.style.setProperty("--color-darker", `hsl(${hsl.hue}, ${hsl.saturation}%, ${hsl.lightness - 12}%)`)
+
+        fetch(`https://api.color.pizza/v1/?values=${color.substring(1)}`).then(response => {
+            response.json().then(data => {
+                nameRef.current!.innerText = data.paletteTitle
+            })
+        })
     }, [color])
 
     return (
@@ -50,6 +57,7 @@ export default function BottleGlass({onClick, color, className = "", liquidPerce
             <div ref={liquidContainerRef}>
                 <div ref={liquidRef} className={styles.liquid}></div>
             </div>
+            <p ref={nameRef} className='text-center font-sans text-lg] pt-3'></p>
         </div>
     )
 }
